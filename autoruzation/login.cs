@@ -34,7 +34,7 @@ namespace autoruzation
         private void login_Load(object sender, EventArgs e)
         {
             timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Interval = 20000;
+            timer1.Interval = 1000;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace autoruzation
             else if (counter == 0)
             {
 
-                //OpenA.Enabled = false;
+                this.Enabled = false;
                 timer.Start();
             }
             
@@ -107,9 +107,10 @@ namespace autoruzation
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //Open.Enabled = true;
+            this.Enabled = true;
             i = 0;
             timer1.Stop();
+            
         }
     }
 }
